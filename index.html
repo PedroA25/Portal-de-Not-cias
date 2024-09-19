@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Notícias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Portal Informativo</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Notícias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="principal">
+            <article>
+                <h2>Incêndio em São Paulo</h2>
+                <img src="Queimada.jpg" alt="Incêndio em São Paulo" class="imagem-noticia">
+                <p>Incêndio de grandes proporções atinge terreno do Inpe no interior de São Paulo.</p>
+                <p>Fogo se alastrou pelo terreno, mas não chegou a atingir os prédios do Inpe. Chamas foram controladas na noite desta quinta-feira (12), mas equipes seguem monitorando a área para evitar reignição das chamas.</p>
+            </article>
+            <article>
+                <h2>Integração de aplicativos nas escolas.</h2>
+                    <img src="Escola.webp" alt="" class="imagem-noticia">
+                    <p>Aplicativos contribuem para criar escolas mais digitalizadas</p>
+                    <p>Uso de aplicativos para aprendizado de novos idiomas está redefinido entre professores e alunos nas escolas.</p>
+            </article>
+        </section>
+
+        <aside class="secundaria">
+            <h3>Destaques</h3>
+            <div class="banner-rotativo">
+                <button class="banner-nav prev" onclick="prevBanner()">❮</button>
+                <div class="banner-container">
+                    <div class="banner-item" data-description="Corinthians vence Fortaleza pela Copa Sul-Americana.">
+                        <img src="Futebol.jpg" alt="Corinthians vence Fortaleza">
+                    </div>
+                    <div class="banner-item" data-description="China coleta amostras do lado oculto da Lua.">
+                        <img src="Lua.webp" alt="China na Lua">
+                    </div>
+                    <div class="banner-item" data-description="Nova tecnologia do Google indicará se imagem é gerada por IA.">
+                        <img src="Google.avif" alt="Nova Tecnologia">
+                    </div>
+                </div>
+                <button class="banner-nav next" onclick="nextBanner()">❯</button>
+            </div>
+            <div class="banner-descricao">
+                <p id="banner-description">Corinthians vence Fortaleza pela Copa Sul-Americana</p>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Portal Informativo - Todos os direitos reservados.</p>
+        <div class="funcionalidades">
+            <button onclick="adjustFontSize(1)">Aumentar Fonte</button>
+            <button onclick="adjustFontSize(-1)">Diminuir Fonte</button>
+            <button onclick="toggleContrast()">Contraste</button>
+            <input type="text" id="search" onkeyup="searchNews()" placeholder="Buscar notícias...">
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
